@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-950 border-b border-gray-900">
+    <nav className="bg-neutral-700 border-b border-neutral-500">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Left side - Mobile Menu Button */}
@@ -100,7 +100,7 @@ const Navbar = () => {
               {isProfileMenuOpen && (
                 <div
                   id="user-menu"
-                  className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className="absolute right-0 z-20 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="user-menu-button"
@@ -153,7 +153,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="absolute top-16 left-0 bg-gray-950 w-full z-10"
+          className="absolute top-16 left-0 bg-gray-950 w-full z-20"
           onMouseLeave={handleMouseLeave}
         >
           <div className="space-y-1 px-4 pb-3 pt-2">
