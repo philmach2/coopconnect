@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import {
-  UserGroupIcon,
+  BellAlertIcon,
   HomeIcon,
   DocumentDuplicateIcon,
+  UserIcon,
 } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 
@@ -13,22 +14,26 @@ const links = [
   {
     name: "Announcements",
     href: "/dashboard/announcements",
-    icon: UserGroupIcon,
+    icon: BellAlertIcon,
   },
   {
     name: "Bylaws",
     href: "/dashboard/bylaws",
     icon: DocumentDuplicateIcon,
   },
-  { name: "House Rules", href: "/dashboard/houserules", icon: UserGroupIcon },
-  { name: "Lease", href: "/dashboard/lease", icon: UserGroupIcon },
+  {
+    name: "House Rules",
+    href: "/dashboard/houserules",
+    icon: DocumentDuplicateIcon,
+  },
+  { name: "Lease", href: "/dashboard/lease", icon: DocumentDuplicateIcon },
   {
     name: "Meeting Minutes",
     href: "/dashboard/meetingminutes",
-    icon: UserGroupIcon,
+    icon: DocumentDuplicateIcon,
   },
 
-  { name: "Profile", href: "/dashboard/profile", icon: UserGroupIcon },
+  { name: "Profile", href: "/dashboard/profile", icon: UserIcon },
 ];
 
 const NavLinks = () => {
