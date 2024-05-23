@@ -1,7 +1,21 @@
-import React from "react";
+import "@/assets/styles/globals.css";
+import Navbar from "@/components/Navbar";
+import SideNav from "@/components/SideNav";
 
-const DashboardLayout = () => {
-  return <div>DashboardLayout</div>;
+const DashboardLayout = ({ children }) => {
+  return (
+    <div>
+      <Navbar />
+      <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
+        <div className="w-full flex-none md:w-64">
+          <SideNav />
+        </div>
+        <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default DashboardLayout;

@@ -1,5 +1,4 @@
 import "@/assets/styles/globals.css";
-import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "78 Charles | West Village Cooperative",
@@ -12,7 +11,6 @@ const LandingLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <Navbar />
         <div>{children}</div>
       </body>
     </html>
