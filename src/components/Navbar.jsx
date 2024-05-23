@@ -145,7 +145,7 @@ const Navbar = () => {
                   {isLoggedIn ? (
                     <>
                       <Link
-                        href="/profile"
+                        href="/dashboard/profile"
                         className="block px-4 py-2 text-sm text-gray-700"
                         role="menuitem"
                         tabIndex="-1"
@@ -163,7 +163,7 @@ const Navbar = () => {
                         Dashboard
                       </Link>
                       <Link
-                        href="/dashboard/messages"
+                        href="/dashboard/announcements"
                         className="block px-4 py-2 text-sm text-gray-700"
                         role="menuitem"
                         tabIndex="-1"
