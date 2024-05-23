@@ -3,8 +3,9 @@ import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "78 Charles | West Village Cooperative",
-  description: "Property at 78 Charles St",
-  keywords: "78, Charles, 78 Charles, west village, coop, property",
+  description: "West Village Cooperative at 78 Charles St",
+  keywords:
+    "78 charles, west village, coop, property, nyc, new york, new york city",
 };
 
 const LandingLayout = ({ children }) => {
