@@ -8,7 +8,7 @@ import profileDefault from "@/assets/images/profile.png";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const pathname = usePathname();
 
@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 right-0 left-0 z-50 bg-stone-300 border-b border-stone-200">
+    <nav className="fixed top-0 right-0 left-0 z-50 bg-neutral-50 border-b border-white">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Left side - Mobile Menu Button */}
@@ -48,7 +48,7 @@ const Navbar = () => {
             <button
               type="button"
               id="mobile-dropdown-button"
-              className={`relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white 
+              className={`relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-gray-400 hover:text-white 
               ${
                 isMobileMenuOpen
                   ? "focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -111,7 +111,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 type="button"
-                className={`relative flex rounded-full bg-gray-400 text-sm hover:bg-gray-200 
+                className={`relative flex rounded-full bg-neutral-50 text-sm hover:bg-neutral-200 
                 ${
                   isProfileMenuOpen
                     ? "focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -202,28 +202,28 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="absolute top-16 left-0 bg-gray-950 w-full z-20"
+          className="absolute top-16 left-0 bg-neutral-100 w-full z-20"
           onMouseLeave={handleMouseLeave}
         >
           <div className="space-y-1 px-4 pb-3 pt-2">
             <Link
               href="/"
-              className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium 
-              ${pathname === "/" ? "bg-gray-900 text-white" : ""}`}
+              className={`text-black hover:bg-stone-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium 
+              ${pathname === "/" ? "bg-stone-500 text-white" : ""}`}
             >
               Home
             </Link>
             <Link
               href="/submission"
-              className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium
-              ${pathname === "/submission" ? "bg-gray-900 text-white" : ""}`}
+              className={`text-black hover:bg-stone-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium
+              ${pathname === "/submission" ? "bg-stone-500 text-white" : ""}`}
             >
               Submit Board Package
             </Link>
             <Link
               href="/dashboard"
-              className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium
-              ${pathname === "/dashboard" ? "bg-gray-900 text-white" : ""}`}
+              className={`text-black hover:bg-stone-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium
+              ${pathname === "/dashboard" ? "bg-stone-500 text-white" : ""}`}
             >
               Shareholder Dashboard
             </Link>

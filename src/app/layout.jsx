@@ -10,7 +10,7 @@ export const metadata = {
 const LandingLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen bg-neutral-50">
         <div>{children}</div>
       </body>
     </html>
