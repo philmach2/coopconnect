@@ -8,7 +8,7 @@ import profileDefault from "@/assets/images/profile.png";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const pathname = usePathname();
 
@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 right-0 left-0 z-50 bg-neutral-50 border-b border-white">
+    <nav className="fixed top-0 right-0 left-0 z-50 bg-neutral-100 border-b border-white">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Left side - Mobile Menu Button */}
@@ -48,10 +48,10 @@ const Navbar = () => {
             <button
               type="button"
               id="mobile-dropdown-button"
-              className={`relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-gray-400 hover:text-white 
+              className={`relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-stone-200 
               ${
                 isMobileMenuOpen
-                  ? "focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  ? "focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
                   : ""
               }`}
               aria-controls="mobile-menu"
@@ -75,6 +75,7 @@ const Navbar = () => {
                 />
               </svg>
             </button>
+            <span className="ml-4 text-lg font-semibold">78 Tenants Corp.</span>
           </div>
 
           {/* Right side - Notifications and Profile */}
@@ -83,7 +84,7 @@ const Navbar = () => {
               <Link href="/dashboard/messages" className="relative group">
                 <button
                   type="button"
-                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative rounded-full p-1 text-black hover:bg-stone-200  focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
                 >
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">View notifications</span>
@@ -111,10 +112,10 @@ const Navbar = () => {
             <div className="relative">
               <button
                 type="button"
-                className={`relative flex rounded-full bg-neutral-50 text-sm hover:bg-neutral-200 
+                className={`relative flex rounded-full bg-neutral-50 text-sm hover:bg-stone-200 
                 ${
                   isProfileMenuOpen
-                    ? "focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    ? "focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
                     : ""
                 }`}
                 id="user-menu-button"
@@ -135,7 +136,7 @@ const Navbar = () => {
               {isProfileMenuOpen && (
                 <div
                   id="user-menu"
-                  className="absolute right-0 z-20 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className="absolute right-0 z-20 mt-2 w-48 origin-top-right rounded-md bg-neutral-100  py-1 shadow-lg ring-1 ring-stone-200 ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="user-menu-button"
@@ -146,7 +147,7 @@ const Navbar = () => {
                     <>
                       <Link
                         href="/dashboard/profile"
-                        className="block px-4 py-2 text-sm text-gray-700"
+                        className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
                         tabIndex="-1"
                         id="user-menu-item-0"
@@ -155,7 +156,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         href="/dashboard"
-                        className="block px-4 py-2 text-sm text-gray-700"
+                        className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
                         tabIndex="-1"
                         id="user-menu-item-2"
@@ -164,7 +165,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         href="/dashboard/announcements"
-                        className="block px-4 py-2 text-sm text-gray-700"
+                        className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
                         tabIndex="-1"
                         id="user-menu-item-2"
@@ -173,7 +174,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         href="#"
-                        className="block px-4 py-2 text-sm text-gray-700"
+                        className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
                         tabIndex="-1"
                         id="user-menu-item-2"
@@ -184,7 +185,7 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href="#"
-                      className="block px-4 py-2 text-sm text-gray-700"
+                      className="block px-4 py-2 text-sm text-black"
                       role="menuitem"
                       tabIndex="-1"
                       id="user-menu-item-2"
@@ -202,7 +203,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="absolute top-16 left-0 bg-neutral-100 w-full z-20"
+          className="absolute top-16 left-0 bg-neutral-100 z-20 w-full"
           onMouseLeave={handleMouseLeave}
         >
           <div className="space-y-1 px-4 pb-3 pt-2">

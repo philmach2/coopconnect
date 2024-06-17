@@ -11,7 +11,7 @@ const LandingLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className="min-h-screen bg-neutral-50">
-        <div>{children}</div>
+        <main>{children}</main>
       </body>
     </html>
   );

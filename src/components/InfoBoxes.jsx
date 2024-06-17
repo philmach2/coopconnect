@@ -7,22 +7,22 @@ const InfoBoxes = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
           <InfoBox
             heading="For Package Submission"
-            backgroundColor="bg-neutral-100"
+            backgroundColor="bg-stone-100"
             buttonInfo={{
               text: "Submit Board Package",
               link: "/properties",
-              backgroundColor: "bg-neutral-500",
+              backgroundColor: "bg-black",
             }}
           >
-            Submit your prepared documents to the 78 Charles Cooperative Board
-            for review.
+            Submit your prepared package to the board of 78 Tenants Corp to
+            review and approve.
           </InfoBox>
           <InfoBox
             heading="For Shareholders"
             backgroundColor="bg-sky-100"
             buttonInfo={{
               text: "Shareholder Dashboard",
-              link: "/properties/add",
+              link: "/dashboard",
               backgroundColor: "bg-sky-500",
             }}
           >

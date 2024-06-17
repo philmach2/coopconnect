@@ -1,11 +1,9 @@
 import "@/assets/styles/globals.css";
-import Navbar from "@/components/Navbar";
 import SideNav from "@/components/SideNav";
 
 const DashboardLayout = ({ children }) => {
   return (
     <div>
-      <Navbar />
       <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
         <div className="w-full flex-none md:w-64">
           <SideNav />
