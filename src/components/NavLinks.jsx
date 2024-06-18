@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import {
   BellAlertIcon,
@@ -6,11 +6,11 @@ import {
   DocumentDuplicateIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const links = [
-  { name: "78 Charles", href: "/", icon: HomeIcon },
+  { name: "Home", href: "/", icon: HomeIcon },
   {
     name: "Announcements",
     href: "/dashboard/announcements",
@@ -37,7 +37,7 @@ const links = [
 ];
 
 const NavLinks = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   return (
     <div className="bg-stone-200 h-full flex-col space-y-2 p-2">
       {links.map((link) => {
@@ -46,7 +46,7 @@ const NavLinks = () => {
           <Link
             key={link.name}
             href={link.href}
-            className="flex h-[48px] items-center justify-center gap-2 rounded-md bg-stone-100 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-700 md:flex-none md:justify-start md:p-2 md:px-3"
+            className="flex h-[48px] items-center justify-center gap-2 rounded-md bg-stone-100 p-3 text-base font-medium hover:bg-sky-50 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"
           >
             <LinkIcon className="w-6" />
             <p className="hidden md:block">{link.name}</p>

@@ -1,4 +1,5 @@
 import "@/assets/styles/globals.css";
+import { nunito } from "@/assets/fonts/fonts";
 
 export const metadata = {
   title: "78 Charles | West Village Cooperative",
@@ -10,7 +11,7 @@ export const metadata = {
 const LandingLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-neutral-50">
+      <body className={`${nunito.className} min-h-screen bg-neutral-50`}>
         <main>{children}</main>
       </body>
     </html>

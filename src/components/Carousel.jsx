@@ -89,7 +89,7 @@ const Carousel = () => {
       </div>
       <div className="absolute top-1/2 transform -translate-y-1/2 left-4">
         <button
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full"
+          className="bg-neutral-200 hover:bg-neutral-100 text-neutral-600 font-bold py-2 px-4 rounded-full"
           onClick={handlePrevious}
         >
           <FaChevronLeft />

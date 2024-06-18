@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 right-0 left-0 z-50 bg-neutral-100 border-b border-white">
+    <nav className="fixed top-0 right-0 left-0 z-50 bg-stone-200">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Left side - Mobile Menu Button */}
@@ -48,7 +48,7 @@ const Navbar = () => {
             <button
               type="button"
               id="mobile-dropdown-button"
-              className={`relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-stone-200 
+              className={`relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-stone-50 
               ${
                 isMobileMenuOpen
                   ? "focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
@@ -84,7 +84,7 @@ const Navbar = () => {
               <Link href="/dashboard/messages" className="relative group">
                 <button
                   type="button"
-                  className="relative rounded-full p-1 text-black hover:bg-stone-200  focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
+                  className="relative rounded-full p-1 text-black hover:bg-stone-50  focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
                 >
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">View notifications</span>
@@ -112,7 +112,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 type="button"
-                className={`relative flex rounded-full bg-neutral-50 text-sm hover:bg-stone-200 
+                className={`relative flex rounded-full bg-stone-200 text-sm hover:bg-stone-50 
                 ${
                   isProfileMenuOpen
                     ? "focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
@@ -136,7 +136,7 @@ const Navbar = () => {
               {isProfileMenuOpen && (
                 <div
                   id="user-menu"
-                  className="absolute right-0 z-20 mt-2 w-48 origin-top-right rounded-md bg-neutral-100  py-1 shadow-lg ring-1 ring-stone-200 ring-opacity-5 focus:outline-none"
+                  className="absolute right-0 z-20 mt-2 w-48 origin-top-right rounded-md bg-neutral-50  py-1 shadow-lg ring-1 ring-stone-50 ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="user-menu-button"
@@ -203,7 +203,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="absolute top-16 left-0 bg-neutral-100 z-20 w-full"
+          className="absolute top-16 left-0 bg-neutral-50 z-20 w-full"
           onMouseLeave={handleMouseLeave}
         >
           <div className="space-y-1 px-4 pb-3 pt-2">

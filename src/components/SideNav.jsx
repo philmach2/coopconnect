@@ -2,11 +2,11 @@ import NavLinks from "./NavLinks";
 
 const SideNav = () => {
   return (
-    <div className="flex h-full flex-col px-3 py-4 md:px-2">
+    <div className="flex h-full flex-col pr-3px py-4 md:pr-2px">
       <div className="flex grow justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
         <NavLinks />
         <form>
-          <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-neutral-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-700 md:flex-none md:justify-start md:p-2 md:px-3">
+          <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-neutral-50 p-3 text-base font-medium hover:bg-sky-100 hover:text-blue-700 md:flex-none md:justify-start md:p-2 md:px-3">
             <div className="hidden md:block">Sign Out</div>
           </button>
         </form>
