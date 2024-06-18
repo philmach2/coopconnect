@@ -215,18 +215,18 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              href="/submission"
-              className={`text-black hover:bg-stone-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium
-              ${pathname === "/submission" ? "bg-stone-500 text-white" : ""}`}
-            >
-              Submit Board Package
-            </Link>
-            <Link
               href="/dashboard"
               className={`text-black hover:bg-stone-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium
               ${pathname === "/dashboard" ? "bg-stone-500 text-white" : ""}`}
             >
               Shareholder Dashboard
+            </Link>
+            <Link
+              href="/submission"
+              className={`text-black hover:bg-stone-400 hover:text-white block rounded-md px-3 py-2 text-base font-medium
+              ${pathname === "/submission" ? "bg-stone-500 text-white" : ""}`}
+            >
+              Submit Board Package
             </Link>
           </div>
         </div>
