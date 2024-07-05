@@ -6,6 +6,8 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 
 const LandingPage = () => {
+  console.log(process.env.MONGODB_URI);
+
   return (
     <>
       <Navbar />
