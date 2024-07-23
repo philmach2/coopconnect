@@ -20,8 +20,8 @@ const About = () => {
             to enhance their living experience. Enjoy panoramic city views from
             the rooftop deck, relax in the tranquil backyard, and benefit from
             additional storage options. At 78 Charles Street, we blend historic
-            charm with modern conveniences to create a comfortable and welcoming
-            home for all.
+            charm with high-tech modern conveniences to create a comfortable and
+            welcoming home for all.
           </p>
         </div>
       </section>

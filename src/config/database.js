@@ -1,24 +1,42 @@
 import mongoose from "mongoose";
 
-let connected = false;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-const connectDB = async () => {
-  mongoose.set("strictQuery", true);
+if (!MONGODB_URI) {
+  throw new Error(
+    "Please define the MONGODB_URI environment variable inside .env"
+  );
+}
 
-  // If DB is already connected, don't connect again.
-  if (connected) {
-    console.log("MongoDB is already connected...");
-    return;
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
+
+async function connectDB() {
+  if (cached.conn) {
+    return cached.conn;
   }
 
-  // Connect to MongoDB
+  if (!cached.promise) {
+    const opts = {
+      bufferCommands: false,
+    };
+
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+      return mongoose;
+    });
+  }
+
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
-    connected = true;
-    console.log("MongoDB connected...");
-  } catch (error) {
-    console.log("Error connecting to MongoDB...", error);
+    cached.conn = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    throw e;
   }
-};
+
+  return cached.conn;
+}
 
 export default connectDB;

@@ -1,10 +1,10 @@
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SideNav from "@/components/SideNav";
+import AuthCheck from "@/components/AuthCheck";
 
-const DashboardLayout = ({ children }) => {
+export default function DashboardLayout({ children }) {
   return (
-    <>
+    <AuthCheck>
       <Navbar />
       <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
         <div className="w-full flex-none md:w-64 mt-12">
@@ -14,8 +14,6 @@ const DashboardLayout = ({ children }) => {
           {children}
         </div>
       </div>
-    </>
+    </AuthCheck>
   );
-};
-
-export default DashboardLayout;
+}

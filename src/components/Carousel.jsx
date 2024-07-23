@@ -20,13 +20,13 @@ const Carousel = () => {
     // charlesSt,
     bleeckerSt2,
     tartine,
+    tenthSt,
     charlesSt2,
-    bistro,
     bleeckerSt,
     cherrySt,
     groveSt,
     fourthSt,
-    tenthSt,
+    bistro,
     waverlySt,
   ];
 
@@ -38,7 +38,7 @@ const Carousel = () => {
       if (carouselRef.current) {
         const carouselWidth = carouselRef.current.offsetWidth;
         const imageWidth = carouselWidth / 3; // Adjust this value to control how many images are visible
-        setTranslateX(-(imageWidth * 4)); // Start with the third image centered
+        setTranslateX(0); // Start with the first image
       }
     };
 

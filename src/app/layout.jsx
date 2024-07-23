@@ -1,5 +1,6 @@
 import "@/assets/styles/globals.css";
 import { nunito } from "@/assets/fonts/fonts";
+import AuthProvider from "@/components/AuthProvider";
 
 export const metadata = {
   title: "78 Charles | West Village Cooperative",
@@ -12,7 +13,7 @@ const LandingLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className={`${nunito.className} min-h-screen bg-neutral-50`}>
-        <main>{children}</main>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

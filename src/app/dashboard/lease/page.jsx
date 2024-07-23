@@ -1,5 +1,3 @@
-import React from "react";
-
 const LeasePage = () => {
   return <div>LeasePage</div>;
 };
