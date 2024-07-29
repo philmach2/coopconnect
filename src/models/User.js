@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
 
 const UserSchema = new mongoose.Schema(
   {
-    // NextAuth.js fields
     name: String,
     email: {
       type: String,
@@ -14,21 +12,13 @@ const UserSchema = new mongoose.Schema(
     },
     emailVerified: Date,
     image: String,
-
-    // Custom fields for user profile
     firstName: {
       type: String,
-      required: true,
       trim: true,
     },
     lastName: {
       type: String,
-      required: true,
       trim: true,
-    },
-    password: {
-      type: String,
-      required: true,
     },
     role: {
       type: String,
@@ -52,13 +42,5 @@ const UserSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
-// Middleware to hash password before saving
-UserSchema.pre("save", async function (next) {
-  if (this.isModified("password")) {
-    this.password = await bcrypt.hash(this.password, 10);
-  }
-  next();
-});
 
 export default mongoose.models.User || mongoose.model("User", UserSchema);

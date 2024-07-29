@@ -1,7 +1,14 @@
-import Navbar from "@/components/Navbar";
-import SideNav from "@/components/SideNav";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
 
-const DashboardPage = () => {
+const DashboardPage = async () => {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    redirect("/auth/signin");
+  }
+
   return <></>;
 };
 

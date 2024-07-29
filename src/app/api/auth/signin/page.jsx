@@ -1,12 +1,28 @@
-import SignIn from "@/components/SignIn";
+"use client";
 
-const SingInPage = () => {
+import { signIn } from "next-auth/react";
+import { useState } from "react";
+
+const SignIn = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await signIn("email", { email, callbackUrl: "/dashboard" });
+  };
+
   return (
-    <div>
-      <h1>Sign In</h1>
-      <SignIn />
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter your email"
+        required
+      />
+      <button type="submit">Sign In with Email</button>
+    </form>
   );
 };
 
-export default SingInPage;
+export default SignIn;
