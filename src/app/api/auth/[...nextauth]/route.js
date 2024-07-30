@@ -9,7 +9,7 @@ export const authOptions = {
     EmailProvider({
       server: {
         host: process.env.EMAIL_SERVER_HOST,
-        port: process.env.EMAIL_SERVER_PORT,
+        port: Number(process.env.EMAIL_SERVER_PORT),
         auth: {
           user: process.env.EMAIL_SERVER_USER,
           pass: process.env.EMAIL_SERVER_PASSWORD,
@@ -20,28 +20,27 @@ export const authOptions = {
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      // Check if the user exists in your database
+      console.log("Sign-in attempt:", { user, email });
       const client = await clientPromise;
       const db = client.db();
       const existingUser = await db
         .collection("users")
         .findOne({ email: user.email.toLowerCase() });
-
-      // Only allow sign in if the user exists
+      console.log("Existing user:", existingUser);
       return !!existingUser;
     },
     async session({ session, user }) {
       if (session?.user) {
         session.user.id = user.id;
-        // Add other custom fields here
       }
       return session;
     },
   },
   pages: {
     signIn: "/auth/signin",
-    error: "/auth/error", // Custom error page
+    error: "/auth/error",
   },
+  debug: true, // Enable debug messages in console
 };
 
 const handler = NextAuth(authOptions);
