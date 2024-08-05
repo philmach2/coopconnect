@@ -2,6 +2,7 @@
 
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
+import LoadingPage from "@/app/loading";
 
 const AuthCheck = ({ children }) => {
   const { data: session, status } = useSession({
@@ -12,7 +13,7 @@ const AuthCheck = ({ children }) => {
   });
 
   if (status === "loading") {
-    return <div>Loading...</div>;
+    return <LoadingPage loading={true} />;
   }
 
   return children;
