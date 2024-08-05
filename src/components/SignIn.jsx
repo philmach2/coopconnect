@@ -36,7 +36,7 @@ const SignIn = () => {
             type="submit"
             className="w-full py-2 px-4 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-400  focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-sky-300"
           >
-            Sign In
+            Verify
           </button>
         </form>
       </div>
