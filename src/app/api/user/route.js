@@ -1,13 +1,14 @@
+import { NextResponse } from "next/server";
 import clientPromise from "@/config/database";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/route";
 
-export const GET = async (request) => {
+export async function GET(request) {
   try {
     const session = await getServerSession(authOptions);
 
     if (!session) {
-      return new Response("Unauthorized", { status: 401 });
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     const client = await clientPromise;
@@ -18,19 +19,19 @@ export const GET = async (request) => {
       .findOne({ email: session.user.email });
 
     if (!user) {
-      return new Response("User Not FOund", { status: 404 });
+      return NextResponse.json({ error: "User Not Found" }, { status: 404 });
     }
 
-    return new Response(
-      JSON.stringify({
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email,
-      }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
+    return NextResponse.json({
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+    });
   } catch (error) {
     console.error(error);
-    return new Response("Something Went Wrong", { status: 500 });
+    return NextResponse.json(
+      { error: "Something Went Wrong" },
+      { status: 500 }
+    );
   }
-};
+}

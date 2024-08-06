@@ -30,9 +30,19 @@ export const authOptions = {
       return !!existingUser;
     },
     async session({ session, user }) {
+      console.log("Session callback - user:", user);
       if (session?.user) {
         session.user.id = user.id;
+        // Fetch the user from the database to get the isBoardMember property
+        const client = await clientPromise;
+        const db = client.db();
+        const dbUser = await db.collection("users").findOne({ _id: user.id });
+        console.log("Session callback - dbUser:", dbUser);
+        if (dbUser) {
+          session.user.isBoardMember = dbUser.isBoardMember || false;
+        }
       }
+      console.log("Session callback - final session:", session);
       return session;
     },
   },
