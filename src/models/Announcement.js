@@ -9,7 +9,7 @@ const AnnouncementSchema = new mongoose.Schema({
   content: {
     type: String,
     required: [true, "Please provide content for the announcement"],
-    maxlength: [3000, "Content cannot be more than 3000 characters"],
+    maxlength: [10000, "Content cannot be more than 10000 characters"],
   },
   author: {
     firstName: {

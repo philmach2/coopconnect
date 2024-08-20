@@ -33,6 +33,15 @@ const fillerAnnouncements = [
     createdAt: new Date("2024-02-01").toISOString(),
     category: "Event",
   },
+  {
+    _id: "filler4",
+    title: "Test Large",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem amet eos magni fuga molestiae ut ipsam tenetur, omnis minima et! Soluta quasi numquam quod quibusdam doloremque, perspiciatis libero eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    author: { firstName: "John", lastName: "Doe" },
+    createdAt: new Date("2024-01-01").toISOString(),
+    category: "General",
+  },
 ];
 
 const AnnouncementBoard = ({ user }) => {
@@ -41,8 +50,16 @@ const AnnouncementBoard = ({ user }) => {
   const [newAnnouncement, setNewAnnouncement] = useState({
     title: "",
     content: "",
-    category: "General", // Add category field
+    category: "General",
   });
+  const [expandedAnnouncements, setExpandedAnnouncements] = useState([]);
+
+  const toggleExpand = (id) => {
+    setExpandedAnnouncements((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
 
   useEffect(() => {
     fetchAnnouncements();
@@ -129,7 +146,7 @@ const AnnouncementBoard = ({ user }) => {
                 name="content"
                 value={newAnnouncement.content}
                 onChange={handleInputChange}
-                placeholder="Announcement Content (max 3,000 characters)"
+                placeholder="Announcement Content (max 10,000 characters)"
                 className="w-full p-2 border rounded"
                 required
               />
@@ -159,20 +176,34 @@ const AnnouncementBoard = ({ user }) => {
 
       <div className="space-y-4">
         {announcements.length > 0 ? (
-          announcements.map((announcement) => (
-            <div key={announcement._id} className="bg-white p-4 rounded shadow">
-              <h2 className="text-xl font-semibold">{announcement.title}</h2>
-              <p className="text-sm text-gray-500">
-                Posted by {announcement.author.firstName}{" "}
-                {announcement.author.lastName} on{" "}
-                {new Date(announcement.createdAt).toLocaleDateString()}
-              </p>
-              <p className="mt-2">{announcement.content}</p>
-              <p className="text-sm text-gray-500 mt-2">
-                Category: {announcement.category}
-              </p>
-            </div>
-          ))
+          announcements.reverse().map((announcement) => {
+            const isExpanded = expandedAnnouncements[announcement._id];
+            return (
+              <div
+                key={announcement._id}
+                className={`bg-white p-4 rounded shadow ${
+                  isExpanded ? "h-auto" : "h-32"
+                } overflow-hidden`}
+              >
+                <h2 className="text-xl font-semibold">{announcement.title}</h2>
+                <p className="text-sm text-gray-500">
+                  Posted by {announcement.author.firstName}{" "}
+                  {announcement.author.lastName} on{" "}
+                  {new Date(announcement.createdAt).toLocaleDateString()}
+                </p>
+                <p className="text-sm text-gray-500 mt-2">
+                  Category: {announcement.category}
+                </p>
+                <button
+                  className="text-blue-500 mt-2"
+                  onClick={() => toggleExpand(announcement._id)}
+                >
+                  {isExpanded ? "Show Less" : "Read More"}
+                </button>
+                <p className="mt-2">{announcement.content}</p>
+              </div>
+            );
+          })
         ) : (
           <p>No announcements available.</p>
         )}
