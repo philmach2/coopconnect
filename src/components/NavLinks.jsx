@@ -89,14 +89,14 @@ const NavLinks = () => {
           </div>
         )}
       </div>
-      <Link
+      {/* <Link
         key={profileLink.name}
         href={profileLink.href}
         className="flex h-[48px] items-center justify-center gap-2 rounded-md bg-stone-100 p-3 text-base font-medium hover:bg-sky-50 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"
       >
         <UserIcon className="w-6" />
         <p className="hidden md:block">{profileLink.name}</p>
-      </Link>
+      </Link> */}
     </div>
   );
 };

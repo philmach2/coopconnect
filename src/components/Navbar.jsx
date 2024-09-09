@@ -163,7 +163,7 @@ const Navbar = () => {
                       >
                         Dashboard
                       </Link>
-                      <Link
+                      {/* <Link
                         href="/dashboard/announcements"
                         className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
@@ -171,7 +171,7 @@ const Navbar = () => {
                         id="user-menu-item-2"
                       >
                         Announcements
-                      </Link>
+                      </Link> */}
                       <Link
                         href="#"
                         className="block px-4 py-2 text-sm text-black"
@@ -184,7 +184,7 @@ const Navbar = () => {
                     </>
                   ) : (
                     <Link
-                      href="/api/auth/signin"
+                      href="#"
                       className="block px-4 py-2 text-sm text-black"
                       role="menuitem"
                       tabIndex="-1"
