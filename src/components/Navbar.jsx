@@ -81,7 +81,7 @@ const Navbar = () => {
           {/* Right side - Notifications and Profile */}
           <div className="flex items-center space-x-4 pr-2">
             {isLoggedIn && (
-              <Link href="/dashboard/messages" className="relative group">
+              <Link href="/dashboard/announcements" className="relative group">
                 <button
                   type="button"
                   className="relative rounded-full p-1 text-black hover:bg-stone-50  focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
