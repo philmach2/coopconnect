@@ -1,15 +1,5 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
+import Error from "@/components/Error";
 
 export default function ErrorPage() {
-  const searchParams = useSearchParams();
-  const error = searchParams.get("error");
-
-  return (
-    <div>
-      <h1>Authentication Error</h1>
-      <p>{error}</p>
-    </div>
-  );
+  return <Error />;
 }

@@ -49,6 +49,7 @@ export const authOptions = {
   pages: {
     signIn: "/auth/signin",
     error: "/auth/error",
+    verifyRequest: "/auth/verify-request",
   },
   debug: true, // Enable debug messages in console
 };

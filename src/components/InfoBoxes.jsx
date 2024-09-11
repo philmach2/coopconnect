@@ -10,7 +10,7 @@ const InfoBoxes = () => {
             backgroundColor="bg-stone-100"
             buttonInfo={{
               text: "Submit Board Package",
-              link: "/properties",
+              link: "/notfound",
               backgroundColor: "bg-black",
             }}
           >
