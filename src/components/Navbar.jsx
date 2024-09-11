@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import profileDefault from "@/assets/images/profile.png";
+import { signOut } from "next-auth/react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -172,19 +173,19 @@ const Navbar = () => {
                       >
                         Announcements
                       </Link> */}
-                      <Link
-                        href="#"
+                      <button
                         className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
                         tabIndex="-1"
                         id="user-menu-item-2"
+                        onClick={() => signOut()}
                       >
                         Sign Out
-                      </Link>
+                      </button>
                     </>
                   ) : (
                     <Link
-                      href="#"
+                      href="/api/auth/signin"
                       className="block px-4 py-2 text-sm text-black"
                       role="menuitem"
                       tabIndex="-1"
