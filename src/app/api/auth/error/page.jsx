@@ -1,5 +1,5 @@
-import Error from "@/components/Error";
+import EmailError from "@/components/EmailError";
 
-export default function ErrorPage() {
-  return <Error />;
+export default function EmailErrorPage() {
+  return <EmailError />;
 }

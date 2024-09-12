@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { FaBan } from "react-icons/fa";
 
-const Error = () => {
+const EmailError = () => {
   return (
     <section className="bg-neutral-50 min-h-screen flex-grow">
       <div className="container m-auto max-w-2xl py-24">
@@ -39,4 +39,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default EmailError;
