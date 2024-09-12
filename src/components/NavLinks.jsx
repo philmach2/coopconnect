@@ -14,34 +14,34 @@ const links = [
   { name: "Home", href: "/", icon: HomeIcon },
   {
     name: "Announcements",
-    href: "/dashboard/announcements",
+    href: "/dashboard/Announcements",
     icon: BellAlertIcon,
   },
 ];
 
 const documentLinks = [
   {
-    name: "Alteration Agreement",
-    href: "/dashboard/alterationagreement",
+    name: "Alterations",
+    href: "/dashboard/AlterationAgreement",
     icon: DocumentDuplicateIcon,
   },
-  { name: "By Laws", href: "/dashboard/bylaws", icon: DocumentDuplicateIcon },
+  { name: "By Laws", href: "/dashboard/ByLaws", icon: DocumentDuplicateIcon },
   {
     name: "House Rules",
-    href: "/dashboard/houserules",
+    href: "/dashboard/HouseRules",
     icon: DocumentDuplicateIcon,
   },
-  { name: "Lease", href: "/dashboard/lease", icon: DocumentDuplicateIcon },
+  { name: "Lease", href: "/dashboard/Lease", icon: DocumentDuplicateIcon },
   {
     name: "Meeting Minutes",
-    href: "/dashboard/meetingminutes",
+    href: "/dashboard/MeetingMinutes",
     icon: DocumentDuplicateIcon,
   },
 ];
 
 const profileLink = {
   name: "Profile",
-  href: "/dashboard/profile",
+  href: "/dashboard/Profile",
   icon: UserIcon,
 };
 

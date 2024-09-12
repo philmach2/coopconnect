@@ -82,7 +82,7 @@ const Navbar = () => {
           {/* Right side - Notifications and Profile */}
           <div className="flex items-center space-x-4 pr-2">
             {isLoggedIn && (
-              <Link href="/dashboard/announcements" className="relative group">
+              <Link href="/dashboard/Announcements" className="relative group">
                 <button
                   type="button"
                   className="relative rounded-full p-1 text-black hover:bg-stone-50  focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-sky-500"
@@ -104,7 +104,7 @@ const Navbar = () => {
                     />
                   </svg>
                 </button>
-                <div className="absolute top-0 right-0  w-2 h-2 bg-rose-500 rounded-full"></div>
+                <div className="absolute top-0 right-0  w-2 h-2 bg-sky-400 rounded-full"></div>
               </Link>
             )}
 
@@ -163,7 +163,7 @@ const Navbar = () => {
                         Dashboard
                       </Link>
                       {/* <Link
-                        href="/dashboard/announcements"
+                        href="/dashboard/Announcements"
                         className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
                         tabIndex="-1"

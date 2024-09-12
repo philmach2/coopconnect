@@ -67,7 +67,7 @@ const AnnouncementBoard = ({ user }) => {
 
   const fetchAnnouncements = async () => {
     try {
-      const response = await fetch("/api/announcements");
+      const response = await fetch("/api/Announcements");
       if (response.ok) {
         const data = await response.json();
         setAnnouncements(data.length > 0 ? data : fillerAnnouncements);
@@ -93,7 +93,7 @@ const AnnouncementBoard = ({ user }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/announcements", {
+      const response = await fetch("/api/Announcements", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
