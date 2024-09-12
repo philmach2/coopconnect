@@ -104,9 +104,7 @@ const Navbar = () => {
                     />
                   </svg>
                 </button>
-                <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-rose-500 rounded-full">
-                  2
-                </span>
+                <div className="absolute top-0 right-0  w-2 h-2 bg-rose-500 rounded-full"></div>
               </Link>
             )}
 
@@ -146,7 +144,7 @@ const Navbar = () => {
                 >
                   {isLoggedIn ? (
                     <>
-                      {/* <Link
+                      <Link
                         href="/dashboard/profile"
                         className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
@@ -154,7 +152,7 @@ const Navbar = () => {
                         id="user-menu-item-0"
                       >
                         Profile
-                      </Link> */}
+                      </Link>
                       <Link
                         href="/dashboard"
                         className="block px-4 py-2 text-sm text-black"
