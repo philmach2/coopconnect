@@ -4,14 +4,16 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import profileDefault from "@/assets/images/profile.png";
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const pathname = usePathname();
+  const { data: session, status } = useSession();
+
+  const isLoggedIn = status === "authenticated";
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen((prev) => {
@@ -145,7 +147,7 @@ const Navbar = () => {
                   {isLoggedIn ? (
                     <>
                       <Link
-                        href="/dashboard/profile"
+                        href="/dashboard/Profile"
                         className="block px-4 py-2 text-sm text-black"
                         role="menuitem"
                         tabIndex="-1"

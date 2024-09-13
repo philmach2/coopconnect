@@ -1,7 +1,13 @@
+import Navbar from "@/components/Navbar";
 import SignIn from "@/components/SignIn";
 
 const SignInPage = () => {
-  return <SignIn />;
+  return (
+    <>
+      <Navbar />
+      <SignIn />
+    </>
+  );
 };
 
 export default SignInPage;

@@ -20,13 +20,13 @@ const EmailError = () => {
             <div className="flex justify-center space-x-4">
               <Link
                 href="/"
-                className="bg-sky-500 hover:bg-sky-400 text-white font-bold py-4 px-6 rounded"
+                className="bg-black hover:opacity-80 text-white font-bold py-4 px-6 rounded"
               >
                 Go Home
               </Link>
               <Link
                 href="/api/auth/signin"
-                className="bg-black hover:opacity-80 text-white font-bold py-4 px-6 rounded"
+                className="bg-sky-500 hover:bg-sky-400 text-white font-bold py-4 px-6 rounded"
               >
                 Try Again
               </Link>
