@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/route";
 import clientPromise from "@/config/database";
 import Announcement from "@/models/Announcement";
+import User from "@/models/User"; // Import the User model
 import mongoose from "mongoose";
 
 export async function GET(request) {
@@ -13,7 +14,6 @@ export async function GET(request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const client = await clientPromise;
     await mongoose.connect(process.env.MONGODB_URI);
 
     const announcements = await Announcement.find({ isActive: true }).sort({
@@ -22,9 +22,9 @@ export async function GET(request) {
 
     return NextResponse.json(announcements);
   } catch (error) {
-    console.error(error);
+    console.error("Error in GET /api/announcements:", error);
     return NextResponse.json(
-      { error: "Something Went Wrong" },
+      { error: "Something Went Wrong", details: error.message },
       { status: 500 }
     );
   } finally {
@@ -42,8 +42,7 @@ export async function POST(request) {
 
     await mongoose.connect(process.env.MONGODB_URI);
 
-    // Fetch the user from the database
-    const User = mongoose.model("User");
+    // Use the imported User model directly
     const user = await User.findOne({ email: session.user.email });
 
     if (!user || !user.isBoardMember) {
@@ -66,12 +65,9 @@ export async function POST(request) {
 
     return NextResponse.json(newAnnouncement, { status: 201 });
   } catch (error) {
-    console.error(error);
-    if (error instanceof mongoose.Error.ValidationError) {
-      return NextResponse.json({ error: error.message }, { status: 400 });
-    }
+    console.error("Error in POST /api/announcements:", error);
     return NextResponse.json(
-      { error: "Something Went Wrong" },
+      { error: "Something Went Wrong", details: error.message },
       { status: 500 }
     );
   } finally {

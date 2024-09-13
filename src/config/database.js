@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+import mongoose from "mongoose";
 
 const uri = process.env.MONGODB_URI;
 const options = {
@@ -27,6 +28,18 @@ if (process.env.NODE_ENV === "development") {
   clientPromise = client.connect();
 }
 
+export const connectToDatabase = async () => {
+  if (mongoose.connection.readyState >= 1) {
+    return;
+  }
+
+  return mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+};
+
 // Export a module-scoped MongoClient promise. By doing this in a
 // separate module, the client can be shared across functions.
+
 export default clientPromise;
