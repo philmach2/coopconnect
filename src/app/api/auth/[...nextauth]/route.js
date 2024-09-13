@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "@/config/database";
+import { ObjectId } from "mongodb";
 
 export const authOptions = {
   adapter: MongoDBAdapter(clientPromise),
@@ -30,19 +31,31 @@ export const authOptions = {
       return !!existingUser;
     },
     async session({ session, user }) {
-      console.log("Session callback - user:", user);
+      console.log(
+        "Session callback - Input user:",
+        JSON.stringify(user, null, 2)
+      );
+
       if (session?.user) {
         session.user.id = user.id;
-        // Fetch the user from the database to get the isBoardMember property
+
         const client = await clientPromise;
         const db = client.db();
-        const dbUser = await db.collection("users").findOne({ _id: user.id });
-        console.log("Session callback - dbUser:", dbUser);
+        const dbUser = await db
+          .collection("users")
+          .findOne({ _id: new ObjectId(user.id) });
+
+        console.log(
+          "Session callback - DB User:",
+          JSON.stringify(dbUser, null, 2)
+        );
+
         if (dbUser) {
           session.user.isBoardMember = dbUser.isBoardMember || false;
         }
       }
-      console.log("Session callback - final session:", session);
+
+      console.log("Final session:", JSON.stringify(session, null, 2));
       return session;
     },
   },

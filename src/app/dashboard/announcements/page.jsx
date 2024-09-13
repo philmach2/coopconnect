@@ -7,6 +7,16 @@ import LoadingPage from "@/app/loading";
 const AnnouncementPage = () => {
   const { data: session, status } = useSession();
 
+  console.log(
+    "AnnouncementPage - full session:",
+    JSON.stringify(session, null, 2)
+  );
+  console.log("AnnouncementPage - session.user:", session?.user);
+  console.log(
+    "AnnouncementPage - isBoardMember:",
+    session?.user?.isBoardMember
+  );
+
   if (status === "loading") {
     return <LoadingPage loading={true} />;
   }

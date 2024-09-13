@@ -5,6 +5,8 @@ import React, { useState, useEffect } from "react";
 import CustomCategoryDropdown from "./CustomCategoryDropdown";
 
 const AnnouncementBoard = ({ user }) => {
+  console.log("User in AnnouncementBoard:", JSON.stringify(user, null, 2));
+  console.log("User object:", user);
   const [announcements, setAnnouncements] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [newAnnouncement, setNewAnnouncement] = useState({
@@ -100,7 +102,7 @@ const AnnouncementBoard = ({ user }) => {
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Announcement Board</h1>
 
-      {!user.isBoardMember && (
+      {user.isBoardMember && (
         <div className="mb-4">
           {!showForm ? (
             <button
