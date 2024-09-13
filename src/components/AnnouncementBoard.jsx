@@ -5,8 +5,8 @@ import React, { useState, useEffect } from "react";
 import CustomCategoryDropdown from "./CustomCategoryDropdown";
 
 const AnnouncementBoard = ({ user }) => {
-  console.log("User in AnnouncementBoard:", JSON.stringify(user, null, 2));
-  console.log("User object:", user);
+  // console.log("User in AnnouncementBoard:", JSON.stringify(user, null, 2));
+  // console.log("User object:", user);
   const [announcements, setAnnouncements] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [newAnnouncement, setNewAnnouncement] = useState({
