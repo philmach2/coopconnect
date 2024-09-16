@@ -42,7 +42,6 @@ export async function POST(request) {
 
     await mongoose.connect(process.env.MONGODB_URI);
 
-    // Use the imported User model directly
     const user = await User.findOne({ email: session.user.email });
 
     if (!user || !user.isBoardMember) {
@@ -57,11 +56,16 @@ export async function POST(request) {
       author: {
         firstName: user.firstName,
         lastName: user.lastName,
+        user: user._id, // Add this line to reference the User model
       },
       category: category || "General",
     });
 
     await newAnnouncement.save();
+
+    // Update the user's announcements array
+    user.announcements.push(newAnnouncement._id);
+    await user.save();
 
     return NextResponse.json(newAnnouncement, { status: 201 });
   } catch (error) {

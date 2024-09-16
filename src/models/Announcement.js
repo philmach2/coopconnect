@@ -20,6 +20,11 @@ const AnnouncementSchema = new mongoose.Schema({
       type: String,
       required: [true, "Please provide the author's last name"],
     },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
   },
   createdAt: {
     type: Date,
