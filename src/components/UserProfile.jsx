@@ -66,7 +66,7 @@ const UserProfile = () => {
             {user.isBoardMember ? "Yes" : "No"}
           </p>
           <p className="text-lg">
-            <span className="font-semibold">Announcements:</span>{" "}
+            <span className="font-semibold">Announcements Made:</span>{" "}
             {user.announcements ? user.announcements.length : 0}
           </p>
         </div>

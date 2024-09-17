@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import LoadingPage from "@/app/loading";
 
 const PDFPreview = ({ documentType }) => {
   const [pdfUrl, setPdfUrl] = useState(null);
@@ -14,9 +15,6 @@ const PDFPreview = ({ documentType }) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-
-        const contentType = response.headers.get("content-type");
-        console.log(`Received content type: ${contentType}`);
 
         const blob = await response.blob();
         console.log(`Received blob size: ${blob.size} bytes`);
@@ -40,8 +38,23 @@ const PDFPreview = ({ documentType }) => {
     };
   }, [documentType]);
 
-  if (loading) return <div>Loading PDF...</div>;
-  if (error) return <div>{error}</div>;
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">
+          Loading Document
+        </h2>
+        <p className="mb-8 text-lg text-center text-gray-600">
+          This is a larger document. It's loading now and may take a moment.
+          Please wait.
+        </p>
+        <LoadingPage loading={true} />
+      </div>
+    );
+  }
+
+  if (error)
+    return <div className="text-red-500 text-center mt-4">{error}</div>;
 
   return (
     <iframe
