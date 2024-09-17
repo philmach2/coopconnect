@@ -16,14 +16,10 @@ const AlterationsAgreementPage = () => {
         </div>
       </div>
 
-      <div>
+      <div className="mb-8">
         <h2 className="text-xl font-semibold mb-4">Example Agreement</h2>
-        <div className="h-[600px] mb-4">
-          <iframe
-            src="/path/to/example-alterations-agreement.pdf"
-            className="w-full h-full border"
-            title="Example Alterations Agreement"
-          />
+        <div className="h-[600px]">
+          <PDFPreview documentType="alterationagreement" />
         </div>
       </div>
     </div>

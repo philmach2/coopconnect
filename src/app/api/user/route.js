@@ -27,12 +27,24 @@ export async function GET(request) {
       return NextResponse.json({ error: "User Not Found" }, { status: 404 });
     }
 
-    console.log("User found. Returning user data.");
-    return NextResponse.json({
+    console.log("User found. Fetching announcements...");
+    const announcements = await db
+      .collection("announcements")
+      .find({ "author.user": user._id })
+      .toArray();
+
+    console.log("User announcements:", announcements);
+
+    const userData = {
       firstName: user.firstName,
       lastName: user.lastName,
       email: user.email,
-    });
+      isBoardMember: user.isBoardMember,
+      announcements: announcements,
+    };
+
+    console.log("Returning user data:", userData);
+    return NextResponse.json(userData);
   } catch (error) {
     console.error("Error in GET /api/user:", error);
     return NextResponse.json(

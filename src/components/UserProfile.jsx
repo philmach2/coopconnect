@@ -29,6 +29,7 @@ const UserProfile = () => {
       if (response.ok) {
         const userData = await response.json();
         console.log("User data received:", userData);
+        console.log("Announcements received:", userData.announcements);
         setUser(userData);
       } else {
         console.error("Failed to fetch user profile. Status:", response.status);
@@ -46,6 +47,8 @@ const UserProfile = () => {
   }
 
   console.log("Rendering user profile. User:", user);
+  console.log("Announcements in render:", user.announcements);
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">User Profile</h1>
@@ -61,6 +64,10 @@ const UserProfile = () => {
           <p className="text-lg">
             <span className="font-semibold">Board Member:</span>{" "}
             {user.isBoardMember ? "Yes" : "No"}
+          </p>
+          <p className="text-lg">
+            <span className="font-semibold">Announcements:</span>{" "}
+            {user.announcements ? user.announcements.length : 0}
           </p>
         </div>
       </div>
