@@ -9,13 +9,12 @@ const InfoBoxes = () => {
             heading="For Package Submission"
             backgroundColor="bg-stone-100"
             buttonInfo={{
-              text: "Submit Board Package",
+              text: "Submit Application",
               link: "/notfound",
               backgroundColor: "bg-black",
             }}
           >
-            Submit your prepared package to the board of 78 Tenants Corp to
-            review and approve.
+            Submit your completed application package for board review.
           </InfoBox>
           <InfoBox
             heading="For Shareholders"
@@ -26,8 +25,8 @@ const InfoBoxes = () => {
               backgroundColor: "bg-sky-500",
             }}
           >
-            Go to Shareholder's Dashboard to access building documents and read
-            messages from the board.
+            Access your exclusive shareholder portal for important documents and
+            board communications.
           </InfoBox>
         </div>
       </div>

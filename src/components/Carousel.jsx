@@ -14,15 +14,19 @@ import groveSt from "@/assets/images/groveSt.png";
 import tartine from "@/assets/images/tartine.png";
 import tenthSt from "@/assets/images/tenthSt.png";
 import waverlySt from "@/assets/images/waverlySt.png";
+import one from "@/assets/images/PRSM_01.jpg";
+import two from "@/assets/images/PRSM_02.jpg";
+import three from "@/assets/images/PRSM_03.jpg";
+import four from "@/assets/images/PRSM_04.jpg";
 
 const Carousel = () => {
   const images = [
     // charlesSt,
     bleeckerSt2,
-    tartine,
-    tenthSt,
-    charlesSt2,
-    bleeckerSt,
+    one,
+    two,
+    three,
+    four,
     cherrySt,
     groveSt,
     fourthSt,

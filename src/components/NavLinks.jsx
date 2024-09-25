@@ -27,11 +27,20 @@ const documentLinks = [
   },
   { name: "By Laws", href: "/dashboard/ByLaws", icon: DocumentDuplicateIcon },
   {
+    name: "COI Example",
+    href: "/dashboard/COI",
+    icon: DocumentDuplicateIcon,
+  },
+  {
     name: "House Rules",
     href: "/dashboard/HouseRules",
     icon: DocumentDuplicateIcon,
   },
-  { name: "Lease", href: "/dashboard/Lease", icon: DocumentDuplicateIcon },
+  {
+    name: "Proprietary Lease",
+    href: "/dashboard/Lease",
+    icon: DocumentDuplicateIcon,
+  },
   {
     name: "Meeting Minutes",
     href: "/dashboard/MeetingMinutes",
