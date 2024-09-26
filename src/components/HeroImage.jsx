@@ -18,7 +18,7 @@ const HeroImage = () => {
       </div>
       <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center">
         <h1
-          className={`${libreBaskerville.className} text-white text-4xl md:text-6xl lg:text-8xl font-normal text-center mt-2 mb-24`}
+          className={`${libreBaskerville.className} text-white text-4xl md:text-6xl lg:text-7xl font-normal text-center  mt-32 mb-24`}
         >
           78 Charles Street
         </h1>
