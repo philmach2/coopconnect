@@ -10,7 +10,7 @@ const InfoBoxes2 = () => {
         buttonInfo={{
           text: "Submit Application",
           link: "/notfound",
-          backgroundColor: "bg-black",
+          backgroundColor: "bg-stone-700",
         }}
       >
         Submit your completed application package for board review and

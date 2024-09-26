@@ -10,10 +10,10 @@ const InfoBox = ({
   return (
     <div className={`${backgroundColor} p-6 rounded-lg shadow-md`}>
       <h2 className={`${textColor} text-2xl font-bold`}>{heading}</h2>
-      <p className={`${textColor} mt-2 mb-4`}>{children}</p>
+      <p className={`${textColor} mt-2 mb-4 font-medium`}>{children}</p>
       <Link
         href={buttonInfo.link}
-        className={`inline-block w-1/2 ${buttonInfo.backgroundColor} text-white rounded-lg px-3 py-2 text-center hover:opacity-80`}
+        className={`inline-block w-1/2 ${buttonInfo.backgroundColor} text-white rounded-lg px-3 py-2 text-center hover:opacity-80 shadow-md`}
       >
         {buttonInfo.text}
       </Link>
