@@ -1,15 +1,11 @@
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "../api/auth/[...nextauth]/route";
-import { redirect } from "next/navigation";
-
-const DashboardPage = async () => {
-  const session = await getServerSession(authOptions);
-
-  // if (!session) {
-  //   redirect("/api/auth/signin");
-  // }
-
-  return <></>;
+const DashboardPage = () => {
+  return (
+    <div className="flex flex-col gap-4">
+      <h1 className="text-2xl font-bold">Dashboard</h1>
+      <p>Welcome to your dashboard!</p>
+      {/* Add your dashboard content here */}
+    </div>
+  );
 };
 
 export default DashboardPage;
