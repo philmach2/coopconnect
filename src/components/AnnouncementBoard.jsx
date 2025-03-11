@@ -3,10 +3,56 @@
 import LoadingPage from "@/app/loading";
 import React, { useState, useEffect } from "react";
 import CustomCategoryDropdown from "./CustomCategoryDropdown";
+import { v4 as uuidv4 } from "uuid"; // You'll need to install this package or use another ID generation method
 
-const AnnouncementBoard = ({ user }) => {
-  // console.log("User in AnnouncementBoard:", JSON.stringify(user, null, 2));
-  // console.log("User object:", user);
+// Hard-coded demo data
+const DEMO_ANNOUNCEMENTS = [
+  {
+    _id: "1",
+    title: "Welcome to Our Platform",
+    content:
+      "We're excited to have you join our community. This platform is designed to help members stay connected and informed about important updates and events. Feel free to explore all the features available to you.",
+    category: "General",
+    author: {
+      firstName: "John",
+      lastName: "Doe",
+    },
+    createdAt: new Date("2025-02-15").toISOString(),
+  },
+  {
+    _id: "2",
+    title: "Upcoming Maintenance",
+    content:
+      "We will be performing scheduled maintenance on our servers this weekend. The platform may be unavailable for approximately 2 hours starting at 12:00 AM EST on Saturday. We apologize for any inconvenience this may cause and appreciate your understanding as we work to improve our services.",
+    category: "Technical",
+    author: {
+      firstName: "Jane",
+      lastName: "Smith",
+    },
+    createdAt: new Date("2025-03-01").toISOString(),
+  },
+  {
+    _id: "3",
+    title: "New Feature Release",
+    content:
+      "We're thrilled to announce the launch of our new messaging feature! Now you can communicate directly with other members through our secure messaging system. This has been one of our most requested features, and we're happy to finally bring it to you. Check out the 'Messages' tab in your dashboard to get started.",
+    category: "Updates",
+    author: {
+      firstName: "Michael",
+      lastName: "Johnson",
+    },
+    createdAt: new Date("2025-03-08").toISOString(),
+  },
+];
+
+// Demo user - change isBoardMember to false to hide posting capabilities
+const DEMO_USER = {
+  isBoardMember: true,
+  firstName: "Demo",
+  lastName: "User",
+};
+
+const AnnouncementBoard = ({ user = DEMO_USER }) => {
   const [announcements, setAnnouncements] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [newAnnouncement, setNewAnnouncement] = useState({
@@ -19,29 +65,9 @@ const AnnouncementBoard = ({ user }) => {
   const [submitError, setSubmitError] = useState(null);
 
   useEffect(() => {
-    fetchAnnouncements();
+    // Initialize with demo data instead of fetching
+    setAnnouncements(DEMO_ANNOUNCEMENTS);
   }, []);
-
-  const fetchAnnouncements = async () => {
-    try {
-      const response = await fetch("/api/announcements");
-      if (response.ok) {
-        const data = await response.json();
-        setAnnouncements(data);
-      } else {
-        const errorData = await response.json();
-        console.error(
-          "Failed to fetch announcements:",
-          response.status,
-          errorData
-        );
-        setAnnouncements([]); // Set to empty array if fetch fails
-      }
-    } catch (error) {
-      console.error("Error fetching announcements:", error);
-      setAnnouncements([]); // Set to empty array if there's an error
-    }
-  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -57,34 +83,36 @@ const AnnouncementBoard = ({ user }) => {
     setIsSubmitting(true);
     setSubmitError(null);
 
-    try {
-      const response = await fetch("/api/announcements", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newAnnouncement),
-      });
+    // Simulate submission delay
+    setTimeout(() => {
+      try {
+        // Create a new announcement with demo data
+        const newAnnouncementData = {
+          _id: uuidv4() || String(Date.now()), // Generate a unique ID
+          ...newAnnouncement,
+          author: {
+            firstName: user.firstName,
+            lastName: user.lastName,
+          },
+          createdAt: new Date().toISOString(),
+        };
 
-      const responseData = await response.json();
-
-      if (response.ok) {
+        // Add the new announcement to the top of the list
         setAnnouncements((prevAnnouncements) => [
-          responseData,
+          newAnnouncementData,
           ...prevAnnouncements,
         ]);
+
+        // Reset the form
         setNewAnnouncement({ title: "", content: "", category: "General" });
         setShowForm(false);
-      } else {
-        console.error("Error response:", responseData);
-        setSubmitError(responseData.error || "Failed to create announcement");
+      } catch (error) {
+        console.error("Error creating announcement:", error);
+        setSubmitError("An unexpected error occurred. Please try again.");
+      } finally {
+        setIsSubmitting(false);
       }
-    } catch (error) {
-      console.error("Error creating announcement:", error);
-      setSubmitError("An unexpected error occurred. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    }, 500); // Simulate a brief delay for realism
   };
 
   const toggleExpand = (id) => {
