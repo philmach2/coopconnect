@@ -36,16 +36,16 @@ const documentLinks = [
     href: "/dashboard/HouseRules",
     icon: DocumentDuplicateIcon,
   },
-  {
-    name: "Proprietary Lease",
-    href: "/dashboard/Lease",
-    icon: DocumentDuplicateIcon,
-  },
-  {
-    name: "Meeting Minutes",
-    href: "/dashboard/MeetingMinutes",
-    icon: DocumentDuplicateIcon,
-  },
+  // {
+  //   name: "Proprietary Lease",
+  //   href: "/dashboard/Lease",
+  //   icon: DocumentDuplicateIcon,
+  // },
+  // {
+  //   name: "Meeting Minutes",
+  //   href: "/dashboard/MeetingMinutes",
+  //   icon: DocumentDuplicateIcon,
+  // },
 ];
 
 const profileLink = {

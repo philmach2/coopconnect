@@ -1,5 +1,5 @@
 import Image from "next/image";
-import InfoBoxes2 from "@/components/InfoBoxes2";
+import InfoBoxes from "@/components/InfoBoxes";
 import { libreBaskerville } from "@/assets/fonts/fonts";
 
 import heroImage from "@/assets/images/PRsM_01.jpg";
@@ -20,10 +20,10 @@ const HeroImage = () => {
         <h1
           className={`${libreBaskerville.className} text-white text-4xl md:text-6xl lg:text-7xl font-normal text-center mt-32 mb-24`}
         >
-          78 Charles Street
+          Simplifying Cooperative Living in NYC
         </h1>
         <div className="w-full max-w-6xl mb-8">
-          <InfoBoxes2 />
+          <InfoBoxes />
         </div>
       </div>
     </div>

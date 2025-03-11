@@ -4,7 +4,7 @@ import AuthCheck from "@/components/AuthCheck";
 
 export default function DashboardLayout({ children }) {
   return (
-    <AuthCheck>
+    <>
       <Navbar />
       <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
         <div className="w-full flex-none md:w-64 mt-12">
@@ -14,6 +14,6 @@ export default function DashboardLayout({ children }) {
           {children}
         </div>
       </div>
-    </AuthCheck>
+    </>
   );
 }

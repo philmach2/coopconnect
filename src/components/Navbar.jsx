@@ -78,7 +78,7 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            <span className="ml-4 text-lg font-semibold">78 Tenants Corp.</span>
+            <span className="ml-4 text-lg font-semibold">CoopConnect NYC</span>
           </div>
 
           {/* Right side - Notifications and Profile */}
